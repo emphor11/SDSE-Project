@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+
+dotenv.config();
 import authRoutes from "./routes/auth.js";
 import transactionRoutes from "./routes/transactions.js";
 import categoryRoutes from "./routes/categories.js";
@@ -10,7 +12,7 @@ import { TransactionService } from "./services/TransactionService.js";
 import { BudgetAlertNotifier } from "./services/BudgetAlertNotifier.js";
 import { BudgetMonitor } from "./services/BudgetMonitor.js";
 
-dotenv.config();
+
 
 const app = express();
 app.use(cors());
